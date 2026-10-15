@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños, Mi Amor!</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            background: #e1bee7;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            color: #4a4a4a; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            min-height: 100vh; 
+            padding: 20px;
+        }
+        .contenedor {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.1);
+            max-width: 450px;
+            text-align: center;
+            border: 2px solid #b39ddb;
+        }
+        h1 { color: #d93838; font-size: 2rem; margin-bottom: 15px; }
+        .foto-placeholder {
+            width: 120px;
+            height: 120px;
+            background-color: #ffccd5;
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        .carta { 
+            font-size: 1.05rem; 
+            line-height: 1.6; 
+            margin-bottom: 25px; 
+            text-align: justify;
+            white-space: pre-line;
+        }
+        /* Corazón animado que simula el pulso del CI 555 */
+        .corazon-contenedor { height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+        .corazon { 
+            background-color: #d93838; 
+            display: inline-block; 
+            height: 40px; 
+            position: relative; 
+            transform: rotate(-45deg); 
+            width: 40px; 
+            animation: pulso555 0.8s infinite; /* Simula frecuencia del circuito */
+        }
+        .corazon:before, .corazon:after { content: ""; background-color: #d93838; border-radius: 50%; height: 40px; position: absolute; width: 40px; }
+        .corazon:before { top: -20px; left: 0; }
+        .corazon:after { left: 20px; top: 0; }
+        @keyframes pulso555 { 
+            0% { transform: scale(1) rotate(-45deg); } 
+            40% { transform: scale(1.25) rotate(-45deg); } 
+            60% { transform: scale(1.1) rotate(-45deg); } 
+            100% { transform: scale(1) rotate(-45deg); } 
+        }
+        .boton {
+            background-color: #d93838;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+            box-shadow: 0 4px 10px rgba(217, 56, 56, 0.3);
+        }
+        .boton:hover { background-color: #b32424; }
+        .mensaje-oculto { display: none; margin-top: 20px; font-weight: bold; color: #b32424; background: #fff0f0; padding: 15px; border-radius: 10px; border-left: 5px solid #d93838; }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <div class="foto-placeholder">📸</div>
+        <h1>¡Feliz Cumpleaños, Mi Amor! ❤️</h1>
+        
+        <div class="carta">
+            Hoy es 19 de octubre y quiero celebrar tu vida de una forma diferente. Tal vez no tenga un regalo comprado en una tienda, pero tengo mis manos, mis conocimientos y un corazón que late por ti a la frecuencia exacta de este código.
+
+            Diseñé esta página especialmente para ti, pensando en cada detalle. Eres la persona más increíble que conozco y te mereces el mundo entero. Gracias por estar a mi lado. ¡Hoy nos espera un día hermoso juntos!
+        </div>
+
+        <div class="corazon-contenedor">
+            <div class="corazon"></div>
+        </div>
+
+        <button class="boton" onclick="mostrarSorpresa()">¿Cuál es el plan de hoy? 👇</button>
+        <div id="sorpresa" class="mensaje-oculto">
+            📍 ¡Prepárate! Nos vemos esta tarde para ir a caminar, ver el atardecer y compartir un momento especial frente al mar en **El Espigón**. ¡Lleva ropa cómoda y muchas ganas de sonreír! 🌊🌅
+        </div>
+    </div>
+
+    <script>
+        function mostrarSorpresa() {
+            var x = document.getElementById("sorpresa");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+                x.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
