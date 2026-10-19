@@ -1,0 +1,11 @@
+PÁGINA DE CUMPLEAÑOS — EDICIÓN UI/UX
+
+1. Descomprime el ZIP completo.
+2. Abre la carpeta en Visual Studio Code mediante Archivo > Abrir carpeta.
+3. Abre index.html con Live Server (botón «Go Live») o directamente en tu navegador.
+4. Las cuatro fotos ya están incluidas.
+5. Para la música añade cancion.mp3 en esta misma carpeta.
+
+La sorpresa aparece únicamente al final de la página.
+El simulador educativo NE555/CD4017 se abre pulsando su tarjeta.
+No se necesita conexión a Internet ni librerías externas para ver la página.
